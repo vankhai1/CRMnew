@@ -1,0 +1,43 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<html>
+  <head>
+  </head>
+<body id="LoginForm">
+<div class="container">
+<h1 class="form-heading">Form Login</h1>
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
+   <h2>Đăng Nhập</h2>
+   <p>Vui lòng nhập tài khoản của bạn</p>
+   </div>
+    <form id="Login" [formGroup]="formGroup" (ngSubmit)="loginProces()">
+
+        <div class="form-group">
+
+
+            <input  class="form-control"  placeholder="Tên nguoidung" formControlName="tenTaiKhoan">
+
+        </div>
+
+        <div class="form-group">
+
+            <input  type="password" class="form-control" id="inputPassword"  placeholder="Mật Khẩu" formControlName="matkhau">
+
+        </div>
+        <div class="forgot">
+        <a href="reset.html">Quên mật khẩu?</a>
+</div>
+        <button type="submit" class="btn btn-primary"  >Đăng nhập</button>
+        <div class="resigter"><a href="resigter">Đăng ký Tài khoản</a></div>
+    </form>
+  
+    </div>
+    <div class="design"><p>Thiết kế bởi Văn Công Khải</p></div>
+</div></div>
+</body>
+
+</html>
