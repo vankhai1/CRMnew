@@ -1,0 +1,44 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<html>
+  <head>
+  </head>
+<body id="LoginForm">
+<div class="container">
+<h1 class="form-heading">Form Resignter</h1>
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
+   <h2>Đăng Ký</h2>
+   <p>Vui lòng nhập tài khoản của bạn</p>
+   </div>
+    <form id="Login" [formGroup]="resigterForm" (submit)="SubMit()">
+
+        <div class="form-group">
+
+
+            <input type="email" class="form-control" formControlName="tenTaiKhoan" id="inputEmail" placeholder="Tên Email">
+
+        </div>
+       
+
+        <div class="form-group">
+
+            <input type="password" class="form-control"  formControlName="matKhau" id="inputPassword" placeholder="Mật Khẩu">
+
+        </div>
+        <div class="forgot">
+        <a href="reset.html">Quên mật khẩu?</a>
+</div>
+        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+        <div class="resigter"><a href="login">trở lai </a></div>
+    </form>
+  
+    </div>
+    <div class="design"><p>Thiết kế bởi Văn Công Khải</p></div>
+</div></div>
+</body>
+
+</html>
