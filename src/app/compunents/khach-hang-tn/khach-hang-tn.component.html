@@ -1,0 +1,120 @@
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+ <div class="form">
+  <h1>{{title}}</h1>
+  
+<div class="btn-toolbar">
+    <button class="btn btn-primary" (click)="goToBottom()">Tạo mới </button>
+   
+</div>
+<div class="well">
+  <div class="container">
+    <div class="row">
+          <div class="col-md-6">
+              <div id="custom-search-input">
+                  <div class="input-group col-md-12">
+                      <input type="text" class="form-control input-lg" placeholder="Tiem Kiem" />
+                      <span class="input-group-btn">
+                          <button class="btn btn-info btn-lg" type="button">
+                              <i class="glyphicon glyphicon-search">search</i>
+                          </button>
+                      </span>
+                  </div>
+              </div>
+          </div>
+    </div>
+  </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+          <th style="width: 36px;"></th>
+        </tr>
+      </thead>
+      <tbody  *ngFor="let s of khachhangs , let i = index ">
+        <tr >
+          <td scope="row">{{i+1}}</td>
+          <td>{{s.idKHTN}}</td>
+          <td>{{s.hanChot}}</td>
+          <td >{{s.Lhkh.hoTenKH}}</td>
+          <td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        
+       
+      </tbody>
+    </table>
+</div>
+<div class="pagination">
+    <ul>
+        <li><a href="#">Prev</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+</div>
+<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Delete Confirmation</h3>
+    </div>
+    <div class="modal-body">
+        <p class="error-text">Are you sure you want to delete the user?</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        <button class="btn btn-danger" data-dismiss="modal">Delete</button>
+    </div>
+</div>
+<hr  width="100%" size="1000px"   />
+
+<div class="formkh" >
+  <div style="background: rgba(243, 243, 243, 0.988); border-radius: 2px; border: 1px solid rgb(255, 253, 253); box-sizing: border-box; color: #717af7; float: none; font-family: Arial, sans-serif; font-size: 15px; margin: 0px auto; outline: 0px; padding: 15px 20px; vertical-align: baseline;">
+    <form method="post">
+      <h3>Tao Lien He</h3>
+     <div class="row">
+          <div class="col-md-6">
+              <div class="form-group">
+                  <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+              </div>
+              <div class="form-group">
+                  <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+              </div>
+              <div class="form-group">
+                  <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
+              </div>
+              <div class="form-group">
+                  <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                  <div class="btn-toolbar">
+                    <button class="btn btn-primary">New User</button>
+                    <button class="btn">Import</button>
+                    <button class="btn">Export</button>
+                   
+                  </div >
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="form-group">
+                  <textarea name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+              </div>
+          </div>
+      </div>
+  </form>
+  </div>
+  
+</div>
+
+
+ </div> 
+</body>
