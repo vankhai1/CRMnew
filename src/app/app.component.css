@@ -1,0 +1,28 @@
+.navbar-new-top{
+  background: rgb(167, 3, 167);
+  
+}
+.navbar-brand{
+  color: rgb(218, 230, 240);
+  font-weight: 600;
+}
+.navbar-brand img{
+  width: 20%;
+}
+.navbar-new-top ul{
+  margin-right: 9%;
+}
+.navbar-new-top ul li{
+  margin-right: 8%;
+}
+.navbar-nav .nav-item a {
+  color: rgb(231, 220, 243);
+  font-size: 14px;
+  font-weight: 600;
+  transition: 1s ease;
+}
+.navbar-nav .nav-item a:hover{
+  color: #c3dae2;
+}
+
+

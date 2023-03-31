@@ -1,0 +1,78 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<nav class="navbar fixed-top navbar-expand-md flex-nowrap navbar-new-top">
+            <a href="/home" class="navbar-brand"><img src="#" alt=""/>CRM</a>
+            
+            <ul class="nav navbar-nav mr-auto">
+               
+                <li class="nav-iteem">
+                    <a href="/trangchu" class="nav-link px-2">Trang Chủ</a>
+                </li>
+                <li class="nav-iteem">
+                    <a *ngIf="loginProces()"  href="/khachhangtn" class="nav-link px-2">Chào Hàng</a>
+                </li>
+                <li class="nav-iteem">
+                    <a *ngIf="loginProces()"  href="/lienhekh" class="nav-link px-2">Liên Hệ</a>
+                </li>
+                <li class="nav-iteem">
+                    <a *ngIf="loginProces()"  href="/congviec" class="nav-link px-2">Công Việc</a>
+                </li>
+                <li class="nav-iteem">
+                    <a *ngIf="loginProces()"  href="/taikhoan" class="nav-link px-2">Tài Khoản</a>
+                </li>
+                <li class="nav-iteem">
+                    <a *ngIf="loginProces()"  href="giaodich" class="nav-link px-2">Giao Dịch</a>
+                </li>
+                <li  class="nav-iteem">
+                    <a *ngIf="loginProces()"  href="/baocao" class="nav-link px-2">Báo Cáo</a>
+                </li>
+            </ul>
+            <div class="userlogin">
+            <ul class="navbar-nav flex-row">
+                
+
+
+                <li class="nav-item">
+                    <a *ngIf="!loginProces()" href="/resigter" class="nav-link px-2">Resigter</a>
+                </li>
+                <li *ngIf="!loginProces()" class="nav-item">
+                    <a href="/login" class="nav-link px-2" >login</a>
+                </li>
+                <!-- <li *ngIf="loginProces()" class="nav-item">
+                    <a href="/login" class="nav-link px-2" (click)="onLogout()" >Logout</a>
+                </li> -->
+                
+               
+                <div class="btn-group" dropdown *ngIf="loginProces()">
+                    
+                    <!-- <button type="button" class="btn btn-lightblue">Wellcome </button> -->
+                    
+                    <img 
+                    src="https://img.freepik.com/premium-vector/female-user-profile-avatar-is-woman-character-screen-saver-with-emotions_505620-617.jpg"
+                    alt="" dropdownToggle class="btn btn-blue dropdown-toggle dropdown-toggle-split"
+                    aria-controls="dropdown-split"
+                    style="width: 45px; height: 45px"
+                    class="rounded-circle"
+                    />
+                      <span class="caret"></span>
+                      <span class="sr-only visually-hidden">Split button!</span>
+                   
+                    <ul id="dropdown-split" *dropdownMenu class="dropdown-menu"
+                        role="menu" aria-labelledby="button-split">
+                      <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+                      <li role="menuitem"><a class="dropdown-item" href="#">Account</a>
+                      </li>
+                      <li role="menuitem"><a class="dropdown-item" href="#">User Profile</a></li>
+                      <li class="divider dropdown-divider"></li>
+                     <li *ngIf="loginProces()" role="menuitem">
+                    <a href="/login" class="dropdown-item" (click)="onLogout()" >Logout</a>
+                     </li>
+                    </ul>
+                  </div>
+
+            </ul>  
+        </div>
+        </nav>
