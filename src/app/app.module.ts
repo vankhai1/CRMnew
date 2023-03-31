@@ -18,7 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TrangchuComponent } from './compunents/trangchu/trangchu.component';
 import { CongViecComponent } from './compunents/cong-viec/cong-viec.component';
 import { TaiKhoanComponent } from './compunents/tai-khoan/tai-khoan.component';
-// import { GiaoDichComponent } from './compunents/giao-dich/giao-dich.component';
+import { GiaoDichComponent } from './compunents/giao-dich/giao-dich.component';
 import { BaoCaoComponent } from './compunents/bao-cao/bao-cao.component';
 import { SentMailComponent } from './compunents/sent-mail/sent-mail.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
@@ -38,7 +38,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     TrangchuComponent,
     CongViecComponent,
     TaiKhoanComponent,
-    // GiaoDichComponent,
+    GiaoDichComponent,
     BaoCaoComponent,
     SentMailComponent,
     
