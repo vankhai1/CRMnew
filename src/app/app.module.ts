@@ -14,7 +14,7 @@ import { HomeComponent } from './compunents/home/home.component';
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { KhachHangTNComponent } from './compunents/khach-hang-tn/khach-hang-tn.component';
-// import { LienHeKHComponent } from './compunents/lien-he-kh/lien-he-kh.component';
+import { LienHeKHComponent } from './compunents/lien-he-kh/lien-he-kh.component';
 import { TrangchuComponent } from './compunents/trangchu/trangchu.component';
 import { CongViecComponent } from './compunents/cong-viec/cong-viec.component';
 import { TaiKhoanComponent } from './compunents/tai-khoan/tai-khoan.component';
@@ -34,7 +34,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     NavComponent,
     HomeComponent,
     KhachHangTNComponent,
-    // LienHeKHComponent,
+    LienHeKHComponent,
     TrangchuComponent,
     CongViecComponent,
     TaiKhoanComponent,
