@@ -1,38 +1,87 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
-<div class="row">
-    <div class="col-xs-6 col-6 col-md-5 col-lg-3">
-      <bs-sortable
-        [(ngModel)]="itemStringsLeft"
-        itemClass="sortable-item"
-        itemActiveClass="sortable-item-active"
-        placeholderItem="Drag here"
-        placeholderClass="placeholderStyle text-center"
-        wrapperClass="sortable-wrapper"
-      ></bs-sortable>
-    </div>
-    <div class="col-xs-6 col-6 col-md-5 col-lg-3">
-      <bs-sortable
-        [(ngModel)]="itemStringsRight"
-        itemClass="sortable-item"
-        itemActiveClass="sortable-item-active"
-        placeholderItem="Drag here"
-        placeholderClass="placeholderStyle text-center"
-        wrapperClass="sortable-wrapper"
-      ></bs-sortable>
-    </div>
-  </div>
-   
-  <div class='row'>
-    <div class="col-xs-6 col-6 col-md-5 col-lg-3">
-      <pre class="code-preview">model: {{ itemStringsLeft | json }}</pre>
-    </div>
-   
-    <div class="col-xs-6 col-6 col-md-5 col-lg-3">
-      <pre class="code-preview">model: {{ itemStringsRight | json }}</pre>
-    </div>
-  </div>
-   
-
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quản lý giao dịch</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		
+		h1 {
+			text-align: center;
+			color: #333;
+		}
+		
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		.form-group {
+			margin-bottom: 20px;
+		}
+		
+		.label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 5px;
+			color: #333;
+		}
+		
+		.input {
+			display: block;
+			padding: 8px;
+			width: 100%;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			background-color: #fff;
+		}
+		
+		.btn {
+			display: inline-block;
+			padding: 8px 16px;
+			background-color: #333;
+			color: #fff;
+			text-decoration: none;
+			border-radius: 4px;
+			transition: background-color 0.3s;
+		}
+		
+		.btn:hover {
+			background-color: #666;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Quản lý giao dịch</h1>
+		<form>
+			<div class="form-group">
+				<label class="label" for="id">Mã giao dịch:</label>
+				<input type="text" id="id" class="input">
+			</div>
+			<div class="form-group">
+				<label class="label" for="date">Ngày giao dịch:</label>
+				<input type="date" id="date" class="input">
+			</div>
+			<div class="form-group">
+				<label class="label" for="customer">Khách hàng:</label>
+				<input type="text" id="customer" class="input">
+			</div>
+			<div class="form-group">
+				<label class="label" for="amount">Số tiền:</label>
+				<input type="text" id="amount" class="input">
+			</div>
+			<a href="#" class="btn">Thêm giao dịch</a>
+			<a href="#" class="btn">Xóa giao dịch</a>
+		</form>
+	</div>
+</body>
+</html>
